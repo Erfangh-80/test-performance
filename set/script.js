@@ -1299,3 +1299,14 @@ mySet.add({
     nationalCode: "1112223334",
   },
 });
+
+console.time("get")
+let found ;
+for (const e of mySet) {
+  if (e.schemaName === "user98") {
+    found = e.fileds.firstName;
+    break;
+  }
+}
+console.log(found)
+console.timeEnd("get")
